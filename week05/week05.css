@@ -75,6 +75,7 @@ img {
 	padding: .4em 1em;
 	color: white;
 	text-decoration: none;
+    
 }
 
 .main-nav a:focus,
@@ -175,6 +176,7 @@ blockquote {
     line-height: 1.45;
     position: relative;
     color: #383838;
+    z-index: -1;
 }
     
     blockquote:before {
