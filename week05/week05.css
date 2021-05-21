@@ -53,6 +53,14 @@ img {
 
 
 /*Navigation*/
+
+.main-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+
 .main-nav ul {
 	display: flex;
 	justify-content: center;
@@ -159,10 +167,19 @@ p.our-story {
     text-align: center;
 }
 
+.gallery-content iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: inherit;
+    top: 0;
+    width: 100%;
+ }
+
 
 /*sidebar*/
 .sidebar-quote {
-    margin: 100px;
+    margin: 50px;
 }
 
 blockquote {
@@ -171,7 +188,7 @@ blockquote {
     font-style: italic;
     width: 90%;
     margin: 0.25em 0 2em;
-    padding-left: 40px;
+    padding-left: 3em;
     padding-top: 2.25em;
     line-height: 1.45;
     position: relative;
@@ -183,19 +200,20 @@ blockquote {
     font-family: Georgia, serif;
     display: block;
     content: "\201C";
-    font-size: 100px;
+    font-size: 6em;
     position: absolute;
     left: -10px;
     top: -35px;
     color: #ccc;
     padding: .25em 0;
+    margin-left: .10em;
 }
     
     blockquote cite {
     color: #870237;
-    font-size: 13px;
+    font-size: 1em;
     display: block;
-    margin-top: 5px;
+    margin-top: 1em;
 }
      
     blockquote cite:before {
@@ -210,13 +228,6 @@ blockquote {
     background: black;
     width: 100%;
     position: relative;
-}
-
-.footer a {
-    color: #ddd;
-    text-transform: none;
-    text-decoration: none; 
-    padding: 2;
 }
 
 /*Grid*/
@@ -244,7 +255,7 @@ To check if the browser supports grid before using it
 	@media screen and (min-width: 60em) {
 
 		.site {
-            max-width: none;
+            max-width: 80em;
             display: grid;
             grid-template-columns: 25% auto;
             grid-template-areas: 
@@ -259,22 +270,12 @@ To check if the browser supports grid before using it
         }
 
         .main-nav {
-            grid-column: nav;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            
-        }
-
-        iframe {
-            width: 750x; 
-            height:360px;
+            grid-column: nav;            
         }
 
         .sidebar-quote {
             grid-column: sidebar;
             display: block;
-            width: 60%;
         }
 
         .main {
@@ -358,5 +359,35 @@ To check if the browser supports grid before using it
         .gallery {
             margin: 0;
         }
+
+        .gallery-content iframe {
+            border: 0;
+            width: 750;
+            left: 0;
+            position: inherit;
+            top: 0;
+            height: 360;
+        }
+
+        blockquote {
+            margin: 0.25em 0 2em;
+            padding-left: 0;
+            padding-top: 2.25em;
+            line-height: 1.45;
+            color: #383838;
+            z-index: -1;
+            position: fixed;
+            top: 10em;
+            max-width: 15%;
+        }
+    
+        blockquote:before {
+        left: -50px;
+        top: -35px;
+        color: #ccc;
+        padding: 0;
+        padding-top: 0.30em;
+        margin-left: 0;
+        }   
     }
 }
