@@ -362,11 +362,11 @@ To check if the browser supports grid before using it
 
         .gallery-content iframe {
             border: 0;
-            width: 750;
+            width: 750px;
             left: 0;
             position: inherit;
             top: 0;
-            height: 360;
+            height: 360px;
         }
 
         blockquote {
