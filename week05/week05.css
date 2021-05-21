@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+  
+
 /* Text meant only for screen readers */
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
@@ -44,6 +49,10 @@ img {
 /*Header*/
 .header {
     margin: 0;
+}
+
+.header a {
+    display:flex;
 }
 
 #banner:hover {
